@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.stopwatch-container {
+  background: #818080; 
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(255, 152, 0, 0.3);
+  width: 420px;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #ff9800;
+}
+
+.circle {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 25px auto;
+}
+
+.circle svg {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+
+circle:first-child {
+  stroke: #333;
+}
+
+#progress {
+  stroke: #ff9800;
+  stroke-dasharray: 820;  
+  stroke-dashoffset: 820;
+  transition: stroke-dashoffset 0.3s linear;
+  filter: drop-shadow(0 0 10px #ff9800);
+}
+
+#display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255,152,0,0.7);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 14px 35px;   
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;   
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  background: #ff9800;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.buttons button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+.buttons button:active {
+  background: #cc7a00;
+  transform: translateY(0);
+}
+#laps {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#laps li {
+  font-size: 18px;   
+  font-weight: 500;  
+  color: white;      
+  margin: 5px 0;     
+}
